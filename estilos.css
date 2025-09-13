@@ -1,80 +1,33 @@
-.grid{
+.grid {
   display: grid;
-  grid-template-columns: repeat(12, 1fr); 
-  gap: 8px; 
+  grid-template-columns: repeat(12, 1fr);
+  gap: 10px;
 }
 
-[class*="col-"] {
-  padding: 8px;
-  border: 1px solid #ccc;
+[class*="columns-"] {
+  padding: 15px;
   text-align: center;
+  color: white;
+  min-height: 60px;
 }
 
-.flex{
-  display: block;
-  width: 100%;
-}
+.azul { 
+  background: blue; }
 
+.verde { 
+  background: green; }
 
-.row{
-  display:flex;
-  flex-wrap: wrap;
-  background:greenyellow;
-  
-}
+.rojo { 
+  background: red; }
 
-.grid{
-  background:greenyellow;
-}
-.grid *,
-.flex .row * {
-  background: pink;
-  border: 1px solid #000000;
-  margin-top: 10px;
-}
-/*Establecer Grid*/
-.flex .columns-12 {
-  flex: 0 0 calc((100% / 12) * 12);
-}
-.flex .columns-11 {
-  flex: 0 0 calc((100% / 12) * 11);
-}
-.flex  .columns-10 {
-  flex: 0 0 calc((100% / 12) * 10);
-}
-.flex  .columns-9 {
-  flex: 0 0 calc((100% / 12) * 9);
-}
-.flex  .columns-8 {
-  flex: 0 0 calc((100% / 12) * 8);
-}
-.flex  .columns-7 {
-  flex: 0 0 calc((100% / 12) * 7);
-}
-.flex  .columns-6 {
-  flex: 0 0 calc((100% / 12) * 6);
-}
-.flex  .columns-5 {
-  flex: 0 0 calc((100% / 12) * 5);
-}
-.flex  .columns-4 {
-  flex: 0 0 calc((100% / 12) * 4);
-}
-.flex  .columns-3 {
-  flex: 0 0 calc((100% / 12) * 3);
-}
-.flex  .columns-2 {
-  flex: 0 0 calc((100% / 12) * 2);
-}
-.flex  .columns-1 {
-  flex: 0 0 calc((100% / 12) * 1);
-}
+.rosa { 
+  background: pink; }
 
-
+.amarillo { 
+  background: yellow; color: black; }
 
 /*Completar*/
-@media screen and (min-width: 768px){
-  .grid .columns-12 {
+.grid .columns-12 {
     grid-column: span 12; 
   }
   .grid .columns-11 {
@@ -110,7 +63,9 @@
   .grid .columns-1 {
     grid-column: span 1;
   } 
-}
-.grid * {
-  grid-column: span 12;
+
+@media screen and (max-width: 767px) {
+  [class*="columns-"] {
+    grid-column: span 12 !important;
+  }
 }
